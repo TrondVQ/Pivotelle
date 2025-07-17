@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(260, 25%, 96%);
+  --foreground: hsl(260, 20%, 18%);
+  --muted: hsl(260, 15%, 92%);
+  --muted-foreground: hsl(260, 8%, 45%);
+  --popover: hsl(260, 20%, 98%);
+  --popover-foreground: hsl(260, 20%, 18%);
+  --card: hsl(260, 20%, 98%);
+  --card-foreground: hsl(260, 20%, 18%);
+  --border: hsl(260, 15%, 85%);
+  --input: hsl(260, 15%, 85%);
+  --primary: hsl(260, 70%, 65%);
+  --primary-foreground: hsl(260, 100%, 98%);
+  --secondary: hsl(260, 12%, 90%);
+  --secondary-foreground: hsl(260, 15%, 25%);
+  --accent: hsl(260, 12%, 90%);
+  --accent-foreground: hsl(260, 15%, 25%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(260, 20%, 18%);
+  --radius: 0.5rem;
+  
+  /* Custom Mona colors - Softer purple theme */
+  --purple-slate-700: hsl(260, 35%, 25%);
+  --purple-slate-800: hsl(260, 40%, 20%);
+  --purple-slate-900: hsl(260, 45%, 15%);
+  --warm-lavender-100: hsl(270, 35%, 95%);
+  --warm-lavender-200: hsl(280, 30%, 85%);
+}
+
+.dark {
+  --background: hsl(261, 15%, 8%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(261, 15%, 15%);
+  --muted-foreground: hsl(261, 8%, 65%);
+  --popover: hsl(261, 15%, 8%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(261, 15%, 8%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(261, 15%, 15%);
+  --input: hsl(261, 15%, 15%);
+  --primary: hsl(261, 83%, 58%);
+  --primary-foreground: hsl(261, 100%, 98%);
+  --secondary: hsl(261, 15%, 15%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(261, 15%, 15%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(261, 40%, 80%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+/* Custom phone frame shadow */
+.phone-shadow {
+  box-shadow: 0 0 0 8px #000000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Custom card shadow */
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom gradients */
+.gradient-purple-slate {
+  background: linear-gradient(135deg, var(--purple-slate-700), var(--purple-slate-800));
+}
+
+.gradient-warm-lavender {
+  background: linear-gradient(135deg, var(--warm-lavender-100), var(--warm-lavender-200));
+}
+
+.gradient-purple-brand {
+  background: linear-gradient(135deg, hsl(260, 70%, 65%), hsl(250, 60%, 55%));
+}

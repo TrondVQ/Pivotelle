@@ -1,0 +1,53 @@
+**AI Prompt for "Mona" React App v2:**
+
+**1. Your Role & Goal:**
+You are an expert senior frontend developer creating a single-page React application using Tailwind CSS. Your goal is to build a beautiful, high-fidelity mock-up of a health app called "Mona" based on a specific visual design reference.
+
+**2. The Visual Reference (Key Instruction):**
+The design should closely match the aesthetic of the provided image [referencing the DALL-E image]. Key elements are:
+- A clean, off-white background.
+- A mix of dark navy/charcoal cards and a prominent peach/terracotta accent card.
+- A simple, clean bottom tab bar for navigation.
+- Modern, sans-serif typography.
+
+**3. The Content (Key Instruction):**
+The content and data for the screens should NOT be what is in the reference image. Instead, use the following specific health-related content:
+
+**4. Detailed Design System (Tailwind CSS):**
+* **Colors:**
+    * Background: `bg-gray-50` or `bg-white`.
+    * Main Cards: A dark navy/charcoal color like `bg-gray-800` or `bg-slate-800`. Text should be white.
+    * Accent Card ("Insight of the Day"): A warm peach/terracotta color like `bg-orange-300` or `bg-amber-400`. Text should be a dark color.
+* **Layout & Cards:** All cards must have `rounded-xl` and `p-6` and a soft `shadow-lg`. Use flexbox or grid for layout.
+* **Typography:** Use a system font stack. Headings should be `font-bold` and `text-2xl`. Body text should be `text-base` or `text-lg`.
+* **Icons:** Use a high-quality icon library like Heroicons.
+
+**5. Screen Components (Build these with the correct content):**
+
+**A. The Dashboard Screen:**
+- Main Heading: "Good morning, Sarah" (`text-3xl font-bold`).
+- **Accent Card:** The "Insight of the Day" card. Headline: "Insight of the Day". Body: "Increasing your intake of leafy greens may help to reduce hot flashes." Include a small right arrow icon.
+- **Three Main Cards (Dark Color):**
+    - Card 1: Headline "Sleep" with a moon icon. Large text "7.9".
+    - Card 2: Headline "Readiness" with a battery icon. Large text "74".
+    - Card 3: Headline "Activity" with a running icon. Large text "82".
+
+**B. The Nutrition Plan Screen:**
+- Main Heading: "Nutrition Plan".
+- Three distinct cards (dark color) for "Breakfast," "Lunch," and "Dinner."
+- Content for Breakfast card: "Oatmeal with nuts and berries."
+- Content for Lunch card: "Grilled salmon with quinoa and broccoli."
+- Content for Dinner card: "Stir-fried tofu with vegetables."
+
+**C. The Insight Screen:**
+- Main Heading: "Insight".
+- A simple visual flow: `[Moon Icon]` `+` `[Leaf Icon]`.
+- Body Text Headline: "Getting better sleep could be beneficial for your hot flashes."
+- Body Text: "Try adding leafy greens to your diet, such as spinach, kale, and arugula."
+
+**D. The Progress Screen:**
+- Main Heading: "Progress".
+* Create a card (dark color) titled "Sleep".
+* Inside this card, simulate a simple line chart. Do not use a charting library. Use an SVG element with a path to draw a simple upward-trending line graph, similar to the reference image.
+
+Please generate the complete, runnable App.js file using React and Tailwind CSS that implements this design and content.
