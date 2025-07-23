@@ -25,6 +25,7 @@ export class MemStorage implements IStorage {
   private currentUserId: number;
   private currentMedicalId: number;
   private currentSymptomId: number;
+  private lastLoggedSymptom: string | null = null;
 
   constructor() {
     this.users = new Map();
@@ -108,6 +109,14 @@ export class MemStorage implements IStorage {
     return Array.from(this.symptoms.values()).filter(
       symptom => symptom.userId === userId
     );
+  }
+
+  async setLastSymptom(symptomName: string): Promise<void> {
+    this.lastLoggedSymptom = symptomName;
+  }
+
+  async getLastSymptom(): Promise<string | null> {
+    return this.lastLoggedSymptom;
   }
 }
 
